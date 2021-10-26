@@ -7,8 +7,9 @@
     "node": "14.x"
   },
   "scripts": {
+    "tsc":"tsc",
     "start": "node dist/servidor.js",
-    "postinstall": "tsc && copyfiles -u 1 src/**/*.mustache dist/",
+    "postinstall": "npm run tsc && copyfiles -u 1 src/**/*.mustache dist/",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon -e ts,json,mustache,js src/servidor.ts"
   },
