@@ -17,7 +17,7 @@ servidor.use(express.urlencoded({extended:true}));
 
 servidor.use(mainRoutes)
 servidor.use((req:Request, res:Response)=>{
-    res.send('Pagina não encontrada')
+    res.render('pages/404')
 })
 
 servidor.listen(process.env.PORT)
